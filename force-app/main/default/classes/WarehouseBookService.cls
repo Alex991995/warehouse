@@ -24,7 +24,10 @@ public with sharing class WarehouseBookService {
   }
 
   public List<Warehouse__c> getWarehouseAndRelatedBooks() {
-    return [SELECT Id, Name, Number_of_books__c,  (SELECT Id, Name FROM Books__r) FROM Warehouse__c];
+    return [
+      SELECT Id, Name, Number_of_books__c, (SELECT Id, Name FROM Books__r)
+      FROM Warehouse__c
+    ];
   }
 
   public List<Book__c> getBooks() {
@@ -33,11 +36,10 @@ public with sharing class WarehouseBookService {
 
   public static void populateSerialNumber(List<Book__c> books) {
     for (Book__c b : books) {
-      Boolean isNotEmpty = (Boolean) String.isNotEmpty(b.Serial_number__c);
-      if (isNotEmpty) {
-        return;
+      Boolean isEmpty = (Boolean) String.isEmpty(b.Serial_number__c);
+      if (isEmpty) {
+        b.Serial_number__c = SerialNumberGenerator.generate();
       }
-      b.Serial_number__c = SerialNumberGenerator.generate();
     }
   }
 }
