@@ -1,5 +1,6 @@
 /**
- *@description Class that manages generating serial numbes
+ *@description Class that manages generating serial number
+ format AA-1-A-1111
  */
 public with sharing class SerialNumberGenerator {
    private static final String chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

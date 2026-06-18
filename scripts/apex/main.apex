@@ -1,15 +1,13 @@
 WarehouseStock warehouseStock = new WarehouseStock();
-// WarehouseBookService warehouseBookService = new WarehouseBookService();
+WarehouseBookService warehouseBookService = new WarehouseBookService();
 
 // 1
-// warehouseAndBook.createRecords();
+// warehouseBookService.createRecords();
 // 2
-// System.debug(warehouseAndBook.getWarehouseAndRelatedBooks());
+// System.debug(warehouseBookService.getWarehouseAndRelatedBooks());
 // 3
-// System.debug(warehouseAndBook.getBooks());
-// 4
-// warehouseAndBook.populateSerialNumber();
+// System.debug(warehouseBookService.getBooks());
 // 5
-// warehouseStock.calculateBooksEachWarehouse();
-System.debug(SerialNumberGenerator.generate());
 // warehouseStock.calculateBooksPerWarehouse();
+// 6
+// System.debug(warehouseBookService.getWarehouseAndRelatedBooks());
