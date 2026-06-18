@@ -1,6 +1,5 @@
-SerialNumberGenerator serialNumberGenerator = new SerialNumberGenerator();
 WarehouseStock warehouseStock = new WarehouseStock();
-CreateRecordsWarehouseAndBook warehouseAndBook = new CreateRecordsWarehouseAndBook(serialNumberGenerator);
+// WarehouseBookService warehouseBookService = new WarehouseBookService();
 
 // 1
 // warehouseAndBook.createRecords();
@@ -12,3 +11,5 @@ CreateRecordsWarehouseAndBook warehouseAndBook = new CreateRecordsWarehouseAndBo
 // warehouseAndBook.populateSerialNumber();
 // 5
 // warehouseStock.calculateBooksEachWarehouse();
+System.debug(SerialNumberGenerator.generate());
+// warehouseStock.calculateBooksPerWarehouse();

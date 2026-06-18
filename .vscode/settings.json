@@ -20,7 +20,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[apex]": {
-    "editor.defaultFormatter": "VishalSkywalker.apex-helper"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[apex-anon]": {
     "editor.defaultFormatter": "Kanko.aura-helper"
