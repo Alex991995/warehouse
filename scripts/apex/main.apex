@@ -1,5 +1,5 @@
 WarehouseStock warehouseStock = new WarehouseStock();
-WarehouseBookService warehouseBookService = new WarehouseBookService();
+WarehouseBookService warehouseBookService = new WarehouseBookService(warehouseStock);
 
 // 1
 // warehouseBookService.createRecords();

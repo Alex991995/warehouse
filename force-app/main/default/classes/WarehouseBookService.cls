@@ -3,6 +3,11 @@
  */
 public with sharing class WarehouseBookService {
   final Integer MAX_RECORDS = 100;
+  WarehouseStock warehouseStock;
+
+  public WarehouseBookService(WarehouseStock warehouseStock) {
+    this.warehouseStock = warehouseStock;
+  }
 
   public void createRecords() {
     List<sObject> genericList = new List<sObject>();
@@ -41,5 +46,6 @@ public with sharing class WarehouseBookService {
         b.Serial_number__c = SerialNumberGenerator.generate();
       }
     }
+    warehouseStock.calculateBooksPerWarehouse();
   }
 }

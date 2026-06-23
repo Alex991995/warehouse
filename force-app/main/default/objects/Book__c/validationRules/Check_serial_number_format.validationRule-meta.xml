@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_serial_number_format</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(
+    REGEX(
+          Serial_number__c,
+        &quot;^[A-Z]{2}-[0-9]-[A-Z]-[0-9]{4}$&quot;
+    )
+)</errorConditionFormula>
+    <errorMessage>You should enter a valid format AA-1-A-1111</errorMessage>
+</ValidationRule>

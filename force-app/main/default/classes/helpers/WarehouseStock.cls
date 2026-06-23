@@ -1,5 +1,5 @@
 public with sharing class WarehouseStock {
-  public void calculateBooksPerWarehouse() {
+  public static void calculateBooksPerWarehouse() {
     AggregateResult[] books = getBooks();
     List<Warehouse__c> updatedWarehouses = new List<Warehouse__c>();
 
@@ -12,7 +12,7 @@ public with sharing class WarehouseStock {
     update updatedWarehouses;
   }
 
-  private AggregateResult[] getBooks() {
+  private static AggregateResult[] getBooks() {
     return [
       SELECT Warehouse__c warehouseId, COUNT(Id) totalBooks
       FROM Book__c
